@@ -11,6 +11,7 @@ Utilizare:
   - composer install (root folder)
   - crearea bazei de date impreuna cu un user pentru aceasta;
   - crearea unui fisier *.env* dupa exemplul din *.env.example*;
+  - executarea migrarii: ```php ./database/migrations/create_users_table.php``` in root-ul proiectului;
   - php -S 127.0.0.1:8000
   
 Pagini: 
