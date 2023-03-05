@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="javascript/userPage.js"></script>
+</head>
+<body>
+<div class="flex flex-col content-center items-center text-center h-full w-full">
+    <div class="flex flex-col bg-gray-300 mt-2.5 px-10 rounded">
+        <h2 class="font-bold text-xl">Filter By</h2>
+        <div class="flex flex-row items-center my-1.5">
+            <label for="name" class="font-bold text-l mr-1.5">Name</label>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="Ex: John"
+                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+        </div>
+        <div class="flex flex-row items-center my-1.5">
+            <label for="name" class="font-bold text-l mr-1.5">Email</label>
+            <input type="text"
+                   id="email"
+                   name="email"
+                   placeholder="Ex: John@gmail.com"
+                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+        </div>
+        <input id="filter_btn"
+               type="button"
+               value="Filter"
+               onclick="getUsers();"
+               class="bg-purple-500 hover:bg-purple-700 text-white font-bold mb-2.5 py-2 px-4 border border-purple-700 rounded"
+        />
+        <input id="export_to_csv_btn"
+               type="button"
+               value="Export DATA to CSV"
+               onclick="exportToCSV();"
+               class="bg-purple-500 hover:bg-purple-700 text-white font-bold mb-2.5 py-2 px-4 border border-purple-700 rounded"
+        />
+    </div>
+    <h2 class="font-bold text-xl mt-2.5">RESULTS</h2>
+    <div id="pagination-container" class="flex row items-center w-3/4 mb-2 bg-gray-200 rounded">
+        <div id="pagination-items"></div>
+    </div>
+    <div id="user-container" class="flex flex-col items-center w-3/4"></div>
+</div>
+</body>
+</html>

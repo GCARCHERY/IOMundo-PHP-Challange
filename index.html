@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="javascript/mainPage.js"></script>
+</head>
+<body>
+<div id="container" class="flex flex-col content-center items-center h-full w-full">
+    <div id="avatar"
+         class="aspect-square w-1/6 flex flex-col items-center bg-slate-700 rounded-full mt-2.5 overflow-hidden"></div>
+    <form id="user-form"
+          name="user-form"
+          action="javascript:registerUser()"
+          class="w-1/2 flex flex-col"
+    >
+        <div class="my-2.5">
+            <label for="name">Name*</label>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="Ex: John"
+                   required
+                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+        </div>
+        <div class="my-2.5">
+            <label for="email">Email*</label>
+            <input type="text"
+                   id="email"
+                   name="email"
+                   placeholder="Ex: John@gmail.com"
+                   required
+                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+        </div>
+        <input type="file"
+               id="image"
+               name="image"
+               accept="image/png, image/jpeg"
+        >
+        <div class="my-2.5">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent">Consent</label>
+        </div>
+        <input
+                type="submit"
+                value="Submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded self-center"
+        >
+    </form>
+</div>
+</body>
+</html>
